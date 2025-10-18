@@ -1,2 +1,2 @@
-# Git-1
-Henlo
+BMI Project
+

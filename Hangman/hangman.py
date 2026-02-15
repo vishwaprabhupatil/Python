@@ -94,6 +94,7 @@ word_list = [
     "spoon", "fork", "knife", "pillow", "blanket", "mirror", "wallet"
 ]
 end=False
+quit=False
 lives=6
 x=lives+1
 a=random.choice(word_list)

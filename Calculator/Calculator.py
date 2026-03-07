@@ -45,45 +45,39 @@ def clear():
 def calculator():
     
     
-        print(art, "\n\n\n")
-        n1=float(input("Enter the first number: "))
+    print(art, "\n\n\n")
+    n1=float(input("Enter the first number: "))
         
-        contuni=False
-        while contuni==False:
+    contuni=False
+    while contuni==False:
             
         
-            print("\n***Choose the operation***")
-            print("Press 1 to Add\nPress 2 to Subtract\nPress 3 to Multipy\nPress 4 to Divide\nPress 5 to Raise to power(for root use '1/second number' while choosing the Second number)\nPress 6 for the square root of the first number")
-            choice=input("\n")
-            if choice!='6':
-                n2=float(input("\nEnter the next number: "))
+        print("\n***Choose the operation***")
+        print("Press 1 to Add\nPress 2 to Subtract\nPress 3 to Multipy\nPress 4 to Divide\nPress 5 to Raise to power(for root use '1/second number' while choosing the Second number)\nPress 6 for the square root of the first number")
+        choice=input("\n")
+        if choice!='6':
+            n2=float(input("\nEnter the next number: "))
 
-            operations={"1":add, "2":sub, "3":mult, "4":div, "5":expo, "6":sqr}
-            symbol={"1":f"{n1} + {n2}", "2":f"{n1} - {n2}", "3":f"{n1} * {n2}", "4": f"{n1} / {n2}", "5":f"({n1})^({n2})", "6": f"√{n1}"}
-            function=operations[choice]
-            b=function(n1,n2)
-            print(f"\n {symbol[choice]} = {b}")
-            conti=input(f"Type 'y' to continue calculating with {b}, or 'n' to start a new calculation, or q to end.\n").lower()    
-            if conti=='y':
-                n1=b
-            elif conti=='n':
-                clear()
-                calculator()
-            elif conti=='q':
-                return conti
-            else:
-                return conti
-            
-end=False
-while end==False:
-    x=calculator()
-    if x=='q':
-        end=True
-    else:
-        end=True
-    
+        operations={"1":add, "2":sub, "3":mult, "4":div, "5":expo, "6":sqr}
+        symbol={"1":f"{n1} + {n2}", "2":f"{n1} - {n2}", "3":f"{n1} * {n2}", "4": f"{n1} / {n2}", "5":f"({n1})^({n2})", "6": f"√{n1}"}
+        function=operations[choice]
+        b=function(n1,n2)
+        print(f"\n {symbol[choice]} = {b}")
+        conti=input(f"Type 'y' to continue calculating with {b}, or 'n' to start a new calculation, or q to end.\n").lower()    
+        if conti=='q':
+            return conti
+        
+        if conti=='y':
+            n1=b
+        elif conti=='n':
+            clear()
+            calculator()
+        else:
+            return conti
+
  
-            
+x=calculator()
+
             
             
             

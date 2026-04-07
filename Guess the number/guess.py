@@ -1,6 +1,10 @@
 import random
 import os
 
+
+def clear():
+    os.system("cls")
+
 number=random.randint(0,100)
 
 def hard():
@@ -53,6 +57,7 @@ while not end:
     quit=input("Do you want to try again? 'y' or 'n': ")
     if quit=='y':
         end=False
+        clear()
     else:
         print("BYE")
         end=True
